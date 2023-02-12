@@ -25,11 +25,6 @@ app.get("/contact",(req,res)=>{
     res.render("contact");
 });
 
-app.get("/product", (req, res) => {
-    res.send("success");
-});
-
-
 app.listen(3000, ()=>{
     console.log("Server is running at port 3000");
  });
