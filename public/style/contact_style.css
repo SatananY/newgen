@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F1FAFB;
+}
+
+.column {
+  float: left;
+  width: 35%;
+  padding: 15px;
+}
+
+.lable {
+  width: 75%;
+}
+
+.bottom-container {
+  text-align: center;
+}
+
+.contact {
+  margin: 0 5%;
+  text-align: center;
+}
+
+.form-floating {
+  margin: 5% 0;
+}
+
+.cantact_input {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #FFFFFF;
+}
+
+.btn-price {
+  background-color: #9DC6FF;
+  border-color: #9DC6FF;
+  border-width: 0 40px;
+  margin-bottom: 5%;
+}
+.row{
+  margin-bottom: 5%;
+}

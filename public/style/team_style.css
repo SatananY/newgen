@@ -1,0 +1,38 @@
+body{
+    background-color: #F1FAFB;
+    font-family: 'Albert Sans', sans-serif;
+    text-align: center;
+}
+.pag{
+    background-color: #F1FAFB;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.head-ti{
+    padding: 100px 0 20px 0;
+
+}
+.about-team{
+    width: 900px;
+    height: 50px;
+    margin: 0 auto 10% auto;
+}
+.our-team{
+    display: inline;
+}
+.ti-team{
+    margin-bottom: 100px;
+}
+a:link{
+    text-decoration: none;
+}
+.row{
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.toonpro{
+    width: 200px;
+    height: 200px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
