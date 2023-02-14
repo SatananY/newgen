@@ -25,10 +25,16 @@ app.get("/contact",(req,res)=>{
     res.render("contact");
 });
 
+app.get("/login",(req,res)=>{
+    res.render("login");
+});
+
+app.get("/signup",(req,res)=>{
+    res.render("signup");
+});
+
+
 app.listen(3000, ()=>{
     console.log("Server is running at port 3000");
  })
- //tan 12345683dasdassad
-=======
- });
- 
+
