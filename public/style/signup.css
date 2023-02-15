@@ -1,0 +1,50 @@
+body {
+    /*font-family: 'Albert Sans', sans-serif;
+      font-family: 'Caveat', cursive;
+      font-family: 'Mali', cursive;
+      font-family: 'Varela Round', sans-serif;*/
+    font-family: 'Albert Sans', sans-serif;
+    background-color: #F1FAFB;
+  }
+ 
+  
+h1 {
+    font-family: 'Mitr', sans-serif;
+    margin-top: 2rem;
+    text-align: center; 
+    color: #81b4fc;
+    filter: drop-shadow(2px 2px 2px rgb(213, 240, 253));
+}
+
+.button-signup{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: center ;
+    
+}  
+
+.form-group{
+    margin: 0 3%;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+
+}
+
+.form-check{
+    margin: 0 3%;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.button-clear {
+    background-color: #9DC6FF;
+    border-color: #9DC6FF;
+    border-width: 0 40px;
+    margin-bottom: 5%;
+  }
+
+  .image-left {
+    width: 100%;
+    margin-left: 8%;
+    filter: drop-shadow(2px 2px 2px black);
+  }
