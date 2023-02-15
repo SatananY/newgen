@@ -69,7 +69,6 @@ app.get("/signup",(req,res)=>{
     res.render("signup");
 });
 
-<<<<<<< HEAD
 app.get("/more",(req,res)=>{
     res.render("more");
 });
@@ -89,7 +88,6 @@ app.get("/special",(req,res)=>{
 app.get("/Spacialadvice",(req,res)=>{
     res.render("Spacialadvice");
 });
-=======
 app.post("/signup", (req, res) => {
     const newUser = new User ({
         email: req.body.email,
@@ -113,7 +111,6 @@ app.get("/logout",(req,res)=>{
     res.redirect("/")
 });
 
->>>>>>> 3f77808454f97dabaa4bfec130287b3a8e735b82
 
 app.listen(3000, ()=>{
     console.log("Server is running at port 3000");
