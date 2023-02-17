@@ -14,6 +14,14 @@ h1 {
   font-weight: medium;
 }
 
+h2{
+  font-family: 'Mitr', sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: medium;
+  
+}
+
 #title {
   background-color: #9DC6FF;
   font-family: 'Albert Sans', sans-serif;

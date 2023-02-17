@@ -3,6 +3,7 @@ const bodyParser = require("body-parser")
 const ejs = require ("ejs")
 
 const mongoose = require ("mongoose")
+mongoose.set('strictQuery', false);
 
 const app = express()
 app.use(express.static("public"))
@@ -15,6 +16,7 @@ const userSchema = {
     username:String,
     email: String,
     password: String,
+    date : String,
     tel: String,
     weight: String,
     height: String,
@@ -24,7 +26,11 @@ const userSchema = {
 const User = new mongoose.model("User", userSchema)
 
 app.get("/",(req,res)=>{
-    res.render("home");
+    res.render("home_to_login");
+});
+
+app.get("/home_to_login",(req,res)=>{
+    res.render("home_to_login");
 });
 
 app.get("/home",(req,res)=>{
@@ -43,15 +49,51 @@ app.get("/login",(req,res)=>{
     res.render("login");
 });
 
+app.post("/login", (req, res)=>{
+
+    const email =  req.body.email;
+    const password = req.body.password;
+
+    User.findOne({email: email}, (err, foundUser) => {
+        if (err) console.log(err)
+        else {
+            if (foundUser) {
+                if (foundUser.password === password) res.render("home");
+                else res.redirect("login")
+            }
+        }
+    });
+});
+
 app.get("/signup",(req,res)=>{
     res.render("signup");
 });
 
-app.post("/singup", (req, res) => {
+app.get("/more",(req,res)=>{
+    res.render("more");
+});
+
+app.get("/Eat",(req,res)=>{
+    res.render("Eat");
+});
+
+app.get("/Personalized",(req,res)=>{
+    res.render("Personalized");
+});
+
+app.get("/special",(req,res)=>{
+    res.render("special");
+});
+
+app.get("/Spacialadvice",(req,res)=>{
+    res.render("Spacialadvice");
+});
+app.post("/signup", (req, res) => {
     const newUser = new User ({
         email: req.body.email,
         password: req.body.password,
         username:req.body.username,
+        date: req.body.date,
         tel: req.body.tel,
         weight: req.body.weight,
         height: req.body.height,
@@ -64,6 +106,11 @@ app.post("/singup", (req, res) => {
         else res.render("home")
     })
 })
+
+app.get("/logout",(req,res)=>{
+    res.redirect("/")
+});
+
 
 app.listen(3000, ()=>{
     console.log("Server is running at port 3000");
