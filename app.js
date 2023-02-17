@@ -127,6 +127,9 @@ app.get("/applyPromo", (req, res)=>{
     res.render("applyPromo");
 });
 
+app.get("/line", (req, res)=>{
+    res.render("line");
+});
 
 
 app.listen(3000, ()=>{
