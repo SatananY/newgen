@@ -111,6 +111,23 @@ app.get("/logout",(req,res)=>{
     res.redirect("/")
 });
 
+app.get("/apply300", (req, res)=>{
+    res.render("apply300");
+});
+app.get("/apply750", (req, res)=>{
+    res.render("apply750");
+});
+app.get("/apply1200", (req, res)=>{
+    res.render("apply1200");
+});
+app.get("/apply1850", (req, res)=>{
+    res.render("apply1850");
+});
+app.get("/applyPromo", (req, res)=>{
+    res.render("applyPromo");
+});
+
+
 
 app.listen(3000, ()=>{
     console.log("Server is running at port 3000");
