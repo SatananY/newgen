@@ -132,25 +132,6 @@ app.get("/line", (req, res)=>{
     res.render("line");
 });
 
-app.get("/gettemp", (req, res)=>{
-    const url = 'https://api.openweathermap.org/data/2.5/weather?q=bangkok&appid=52c9656753d0778389fdbbf7794de226&units=metric';
-    https.get(url, (response)=>{
-        console.log(response);
-        console.log(response.statusCode);
-
-        response.on("data", (data)=>{
-            let weatherData = JSON.parse(data);
-            const icon = weatherData.weather[0].icon;
-            let imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
-            res.writeHead(200, {"Content-type":"text/html; charset=utf-8"});
-            res.write("<p>ณ จังหวัด "+weatherData.name+"</p>");
-            res.write("<p>มีอากาศ "+weatherData.main.temp+"</p>");
-            res.write("<p>สภาพอากาศในตอนนี้ "+weatherData.weather[0].description+"</p>");
-            res.write("<img src="+imgURL+" >");
-            res.send();
-        });
-
-    });
 
   
 //     request('https://api.openweathermap.org/data/2.5/weather?q=bangkok&appid=52c9656753d0778389fdbbf7794de226&units=metric', (err,response,body) => {
@@ -159,7 +140,7 @@ app.get("/gettemp", (req, res)=>{
 //         res.send(body);
         
     
-});
+
 
 app.get("/index", (req, res)=>{
     res.render("index");
@@ -168,7 +149,7 @@ app.get("/index", (req, res)=>{
 app.post("/index", (req, res)=>{
     console.log(req.body.cityName);
     const city = req.body.cityName;
-    const url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=52c9656753d0778389fdbbf7794de226&units=metric";
+    const url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=52c9656753d0778389fdbbf7794de226&units=metric&lang=TH";
     https.get(url, (response)=>{
         console.log(response);
         console.log(response.statusCode);
