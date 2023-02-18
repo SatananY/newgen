@@ -1,8 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser")
 const ejs = require ("ejs")
-
-const mongoose = require ("mongoose")
+// const request = require ('request');
+const mongoose = require ("mongoose");
+const https = require("https")
 mongoose.set('strictQuery', false);
 
 const app = express()
@@ -131,10 +132,71 @@ app.get("/line", (req, res)=>{
     res.render("line");
 });
 
+app.get("/gettemp", (req, res)=>{
+    const url = 'https://api.openweathermap.org/data/2.5/weather?q=bangkok&appid=52c9656753d0778389fdbbf7794de226&units=metric';
+    https.get(url, (response)=>{
+        console.log(response);
+        console.log(response.statusCode);
+
+        response.on("data", (data)=>{
+            let weatherData = JSON.parse(data);
+            const icon = weatherData.weather[0].icon;
+            let imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+            res.writeHead(200, {"Content-type":"text/html; charset=utf-8"});
+            res.write("<p>ณ จังหวัด "+weatherData.name+"</p>");
+            res.write("<p>มีอากาศ "+weatherData.main.temp+"</p>");
+            res.write("<p>สภาพอากาศในตอนนี้ "+weatherData.weather[0].description+"</p>");
+            res.write("<img src="+imgURL+" >");
+            res.send();
+        });
+
+    });
+
+  
+//     request('https://api.openweathermap.org/data/2.5/weather?q=bangkok&appid=52c9656753d0778389fdbbf7794de226&units=metric', (err,response,body) => {
+//         console.log(err);
+//         console.log("Status Code: " + response.statusCode);
+//         res.send(body);
+        
+    
+});
+
+app.get("/index", (req, res)=>{
+    res.render("index");
+});
+
+app.post("/index", (req, res)=>{
+    console.log(req.body.cityName);
+    const city = req.body.cityName;
+    const url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=52c9656753d0778389fdbbf7794de226&units=metric";
+    https.get(url, (response)=>{
+        console.log(response);
+        console.log(response.statusCode);
+
+        response.on("data", (data)=>{
+            let weatherData = JSON.parse(data);
+            const icon = weatherData.weather[0].icon;
+            let imgURL = "http://openweathermap.org/img/wn/"+icon+"@2x.png";
+            res.writeHead(200, {"Content-type":"text/html; charset=utf-8"});
+            res.write("<p>ณ จังหวัด "+weatherData.name+"</p>");
+            res.write("<p>มีอากาศ "+weatherData.main.temp+"</p>");
+            res.write("<p>สภาพอากาศในตอนนี้ "+weatherData.weather[0].description+"</p>");
+            res.write("<img src="+imgURL+" >");
+            res.send();
+        });
+
+    });
+
+
+});
+
+
+
+
+
 
 app.listen(3000, ()=>{
     console.log("Server is running at port 3000");
  })
  //tan 12345683dasdassad
 
- 
