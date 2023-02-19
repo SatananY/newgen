@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Albert+Sans&family=Caveat&family=Mali&family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1eafb86563.js" crossorigin="anonymous"></script>
-
+    <link rel="shortcut icon" href="image/Icon.ico" >
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
@@ -16,6 +16,7 @@
   </head>
   <body>
     <!-- navba -->
+
 <nav class="navbar navbar-expand-lg bg-light">
           <div class="container-fluid">
               <a class="navbar-brand" href="/home">
@@ -39,28 +40,34 @@
                   <a class="nav-link" href="/contact">Contact</a>
                 </li>
 
+                <li class="nav-item">
+                  <a class="nav-link" href="/index">Temp</a>
+                </li>
+                
               </ul>
               <form class="d-flex" role="search">
-              <button class="btn btn-outline-success1" type="submit"><a class="nav-link" href="/login">LOGIN</button></a>
+              <button class="btn btn-dark" type="submit"><a class="nav-link" link href="/logout">LOGOUT</button></a>
 
-                <button class="btn btn-outline-success" type="submit">SIGN UP</button>
               </form>
             </div>
           </div>
         </nav>
-
+   
 <!-- title -->
 
     <section id="title">
        <div class="row" style=" justify-content: center;">
         <div class="col-md-6 " style="text-align: center; padding-top: 30px;">
         <div >
+          <h2>Welcome</h2>
           <h1 class="title">Healthy Up</h1>
           <h4>Want To Exercise Can Download</h4>
         </div>
          <div >
-          <button type="button" class="btn btn-dark btn-lg download-button"> Download <i class="fa-brands fa-apple"></i></button>
-          <button type="button" class="btn btn-outline-light btn-lg download-button"> Download <i class="fab fa-google-play"></i></button>
+         <button onclick="location.href='https://www.apple.com/th/app-store/'" type="button" class="btn btn-dark btn-lg download-button footer-link" >Download <i class="fa-brands fa-apple"></i></button>
+         <button onclick="location.href='https://play.google.com/store/games?device=phone&hl=th'" type="button" class="btn btn-outline-light btn-lg download-button"> Download <i class="fab fa-google-play"></i></button>
+         
+          
         </div>
         </div>
         <div class="col-md-6 " style="text-align: center;">
@@ -84,7 +91,7 @@
                         <h1>300+ Workouts</h1>
                         <p>Diversify with over 300 exercises.</p>
                         <div class="button">
-                            <button type="button" class="btn btn-feature button-feature">more</button>
+                            <button type="button" class="btn btn-feature button-feature"><a class="nav-link" href="/more">more</button></a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +102,7 @@
                         <h1>Eat healthier</h1>
                         <p>Increase the efficiency of eating properly and completely.</p>
                         <div class="button">
-                            <button type="button" class="btn btn-feature button-feature">more</button>
+                          <button type="button" class="btn btn-feature button-feature"><a class="nav-link" href="/Eat">more</button></a>
                         </div>
                     </div>
                 </div>
@@ -112,7 +119,7 @@
                         <h1>Spacial course</h1>
                         <p>There are many courses that you can study and follow anywhere.</p>
                         <div class="button">
-                            <button type="button" class="btn btn-feature button-feature">more</button>
+                            <button type="button" class="btn btn-feature button-feature"><a class="nav-link" href="/special">more</button></a>
                         </div>
                     </div>
                 </div>
@@ -123,7 +130,7 @@
                         <h1>Personalized plan</h1>
                         <p>Ready to design eating and exercise schedules that are suitable for users.</p>
                         <div class="button">
-                            <button type="button" class="btn btn-feature button-feature">more</button>
+                            <button type="button" class="btn btn-feature button-feature"><a class="nav-link" href="/Personalized">more</button></a>
                         </div>
                     </div>
                 </div>
@@ -140,7 +147,7 @@
                         <h1>Spacial advice</h1>
                         <p>Consult various health problems anytime, anywhere</p>
                         <div class="button">
-                            <button type="button" class="btn btn-feature button-feature">more</button>
+                          <button type="button" class="btn btn-feature button-feature"><a class="nav-link" href="/Spacialadvice">more</button></a>
                         </div>
                     </div>
                 </div>
@@ -149,93 +156,93 @@
     </section>
 
 
+<!-- price -->
+<section class="price">
+  <h1>CHANGE STARTS TODAY!</h1>
+    <h3>YOU CAN GET</h3>Personalized Plan <br>
+    300+ home workouts <br>
+    eat healthier <br>
+    special courses <br>
 
-    <!-- price -->
-    <section class="price">
-    <h1>CHANGE STARTS TODAY!</h1>
-      <h3>YOU CAN GET</h3>Personalized Plan <br>
-      300+ home workouts <br>
-      eat healthier <br>
-      special courses <br>
-
-    <div class="row ">
-      <div class="col-lg-3 col-md-6 col-sm-6 ">
-        <div class="price_style ">
-          <h2>Premium <br>1 month </h2>
-          <p class="price-text">฿300/month </p><br>
-          <button type="button" class="btn btn-price">Apply now</button>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 ">
-        <div class="price_style">
-          <h2>Premium <br>3 month</h2>
-          <p class="price-text">฿750/3 month </p><br>
-          <button type="button" class="btn btn-price">Apply now</button>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="price_style">
-          <h2>Premium <br>6 month </h2>
-          <p class="price-text">฿1200/6 month</p> <br>
-          <button type="button" class="btn btn-price">Apply now</button>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 ">
-        <div class="price_style">
-          <h2>Premium <br>1 year</h2>
-          <p class="price-text">฿1850/year</p> <br>
-          <button type="button" class="btn btn-price">Apply now</button>
-        </div>
+  <div class="row ">
+    <div class="col-lg-3 col-md-6 col-sm-6 ">
+      <div class="price_style ">
+        <h2>Premium <br>1 month </h2>
+        <p class="price-text">฿300/month </p><br>
+        <button  type="button" class="btn btn-price"><a class="nav-link" href="/apply300">Apply now</button></a>
       </div>
     </div>
-
-  </section>
-
-  <!-- Testimonial -->
-  <section class="Testimonial">
-    <div class="price_style ">
-     <h1>TESTIMONIAl</h1>
-
-        <!-- แอพพลิเคชั่น Healthy Up เป็นสำหรับกลุ่มลูกค้าที่มีวัยเรียน - วัยทำงาน ทำให้แอพพลิเคชั่นนั้นสามารถตอบโจทย์การควบคุบน้ำหนักและออกกำลังกาย<br>
-        โดยมีผู้เชี่ยวชาญชั้นนำในการให้บริการทำให้การกินและการออกกำลังกายเป็นเรื่องง่ายและรวดเร็วและแอพพลิเคชั่นนั้นได้รวบรวมข้อมูลการออกกำลังที่ถูกต้อง<br>
-        และด้านโภชนาการอย่างครบถ้วนเช่นกัน<br> <br> -->
-
-
-        Healthy Up application is for customers with school age - working age, making the application suitable for weight control and exercise.<br>
-        Our leading experts make eating and exercising quick and easy, and the app collects accurate workout data.<br>
-        and nutrition in its entirety as well<br>
+    <div class="col-lg-3 col-md-6 col-sm-6 ">
+      <div class="price_style">
+        <h2>Premium <br>3 month</h2>
+        <p class="price-text">฿750/3 month </p><br>
+        <button  type="button" class="btn btn-price"><a class="nav-link" href="/apply750">Apply now</button></a>
+      </div>
     </div>
-  </section>
-  <!-- promotion -->
-    <section class = "promotion">
-         <div class = "row promotion" >
-          <div class = "col-lg-4 col-md-4 col-sm-6 row image1-promo">
-                  <img class = "image-left" src="image/image-left.png" alt="image-left">
-               </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <div class="price_style">
+        <h2>Premium <br>6 month </h2>
+        <p class="price-text">฿1200/6 month</p> <br>
+        <button  type="button" class="btn btn-price"><a class="nav-link" href="/apply1200">Apply now</button></a>
+      </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6 ">
+      <div class="price_style">
+        <h2>Premium <br>1 year</h2>
+        <p class="price-text">฿1850/year</p> <br>
+        <button  type="button" class="btn btn-price"><a class="nav-link" href="/apply1850">Apply now</button></a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Testimonial -->
+<section class="Testimonial">
+  <div class="price_style ">
+   <h1>TESTIMONIAl</h1>
+
+      <!-- แอพพลิเคชั่น Healthy Up เป็นสำหรับกลุ่มลูกค้าที่มีวัยเรียน - วัยทำงาน ทำให้แอพพลิเคชั่นนั้นสามารถตอบโจทย์การควบคุบน้ำหนักและออกกำลังกาย<br>
+      โดยมีผู้เชี่ยวชาญชั้นนำในการให้บริการทำให้การกินและการออกกำลังกายเป็นเรื่องง่ายและรวดเร็วและแอพพลิเคชั่นนั้นได้รวบรวมข้อมูลการออกกำลังที่ถูกต้อง<br>
+      และด้านโภชนาการอย่างครบถ้วนเช่นกัน<br> <br> -->
 
 
-          <div class = "col-lg-4 col-md-4 col-sm-6 row texttitle">
-              <div class="text-promo">
-                  <div class="promotext"><strong>PROMOTIONS SALES</strong></div>
-                  <div class="saletext"><strong>70% OFF</strong></div>
-                  <div class="disciptiontext">
-                    Try it free for 14 days.
-                    <p>Get a special 70% discount for the first sign up.</p>
-                  </div>
-                  <div class="button">
-                    <button type="button" class="btn btn-dark btn-lg buy-button">Apply now</button>
-                    <!-- รอทำให้กดเชื่อมไปหน้า sign-up ได้ -->
-                  </div>
+      Healthy Up application is for customers with school age - working age, making the application suitable for weight control and exercise.<br>
+      Our leading experts make eating and exercising quick and easy, and the app collects accurate workout data.<br>
+      and nutrition in its entirety as well<br>
+  </div>
+</section>
+<!-- promotion -->
+  <section class = "promotion">
+       <div class = "row promotion" >
+        <div class = "col-lg-4 col-md-4 col-sm-6 row image1-promo">
+                <img class = "image-left" src="image/image-left.png" alt="image-left">
+             </div>
 
-              </div>
-          </div>
 
-          <div class = "col-lg-4 col-md-4 col-sm-6 row image2-promo2 ">
-                  <img class = "image-right" src="image/image-right.png" alt="image-right">
-              </div>
+        <div class = "col-lg-4 col-md-4 col-sm-6 row texttitle">
+            <div class="text-promo">
+                <div class="promotext"><strong>PROMOTIONS SALES</strong></div>
+                <div class="saletext"><strong>70% OFF</strong></div>
+                <div class="disciptiontext">
+                  Try it free for 14 days.
+                  <p>Get a special 70% discount for the first sign up.</p>
+                </div>
+                <div class="button">
+                  <button  type="button" class="btn btn-dark btn-lg buy-button"><a class="nav-link" href="/applyPromo">Apply now</button></a>
+                  
+                </div>
+
+            </div>
         </div>
 
-     </section>
+        <div class = "col-lg-4 col-md-4 col-sm-6 row image2-promo2 ">
+                <img class = "image-right" src="image/image-right.png" alt="image-right">
+            </div>
+      </div>
+
+   </section>
+
 
 
     <!-- navba -->
@@ -263,9 +270,7 @@
                     </li>
                    </ul>
                    <form class="d-flex" role="search">
-                   <button class="btn btn-outline-success1" type="submit"><a class="nav-link" href="/login">LOGIN</button></a>
-
-                     <button class="btn btn-outline-success" type="submit">SIGN UP</button>
+                    <button class="btn btn-dark" type="submit"><a class="nav-link" href="/home_to_login">LOGOUT</button></a>
                    </form>
                  </div>
                </div>
