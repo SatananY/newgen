@@ -7,7 +7,7 @@
 5. ณัฏฐกิตติ์ กุลจิตติพิเชียร 6352300782 
 6. ปนัดดา บุตรเวียงพันธ์ 6352300855
 
-### Link : ([Youtube](https://youtu.be/RGypFdTBtTg)
+### Link : [Youtube](https://youtu.be/RGypFdTBtTg)
 
 ### Website name : Healthy Up
 ภายในประกอบไปด้วย
